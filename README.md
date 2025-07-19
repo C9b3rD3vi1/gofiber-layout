@@ -3,7 +3,7 @@ This package modified Fiber's [html](https://github.com/gofiber/template/tree/ma
 ### Installation
 
 ```
-go get -u github.com/C9b3rD3vi1/gofiber-layout
+go get -u github.com/znbang/gofiber-layout
 ```
 
 ### Example

@@ -1,4 +1,4 @@
-module github.com/C9b3rD3vi1/gofiber-layout
+module github.com/znbang/gofiber-layout
 
 go 1.16
 
