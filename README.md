@@ -1,42 +1,45 @@
 This package modified Fiber's [html](https://github.com/gofiber/template/tree/master/html) template engine to support layout using block and define.
+
 ### Installation
+
 ```
-go get -u github.com/znbang/gofiber-layout
+go get -u github.com/C9b3rD3vi1/gofiber-layout
 ```
 
 ### Example
+
 #### views/layouts/main.html
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{block "title" .}}Layout{{end}}</title>
-</head>
-<body>
-{{block "content" .}}
-This is layout.html.
-{{end}}
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{{block "title" .}}Layout{{end}}</title>
+    </head>
+    <body>
+        {{block "content" .}} This is layout.html. {{end}}
+    </body>
 </html>
 ```
+
 #### views/index.html
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{define "title"}}Index{{end}}</title>
-</head>
-<body>
-{{define "content"}}
-This is index.html.
-{{end}}
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{{define "title"}}Index{{end}}</title>
+    </head>
+    <body>
+        {{define "content"}} This is index.html. {{end}}
+    </body>
 </html>
 ```
 
 #### main.go
+
 ```go
 package main
 
@@ -73,17 +76,16 @@ func main() {
 ```
 
 #### Generated HTML
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Index</title>
-</head>
-<body>
-
-This is index.html.
-
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Index</title>
+    </head>
+    <body>
+        This is index.html.
+    </body>
 </html>
 ```
