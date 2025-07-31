@@ -50,7 +50,7 @@ import (
 	"net/http"
 
 	"github.com/gofiber/fiber/v2"
-	"github.com/znbang/gofiber-layout/html"
+	"github.com/C9b3rD3vi1/gofiber-layout/html"
 )
 
 //go:embed views/*
